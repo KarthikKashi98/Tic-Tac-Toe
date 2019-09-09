@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game adda</title>
+    <link rel="icon" href="images/tic_tac_toe.gif">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js.js">
+
+
+
+    </script>
+    <style>
+
+
+        body{
+            background-image: linear-gradient(to right,orangered,aqua);
+            background-size: cover;
+        }
+        .box{
+            border: 1px solid white;
+            background-color: black;
+            width:40px;
+            height: 40px;
+            display: inline-block;
+        text-align: center;
+            margin: -2px;
+
+
+
+        }
+
+        p{
+            color: white;
+            font-size: 20px;
+            line-height: 30px;
+
+
+        }
+        button{
+            background-color: chartreuse;
+            padding: 6px;
+            border-radius: 5px;
+
+
+        }
+        button:hover{
+            opacity: .7;
+        }
+        a{
+            border: 2px solid black;
+            color: black;
+            background-color: chartreuse;
+            padding: 10px;
+            text-align: center;
+            margin-top: 200px;
+            border-radius: 5px;
+
+
+
+        }
+        a:hover{
+            opacity: .7;
+        }
+        .pointsA{
+            float: left;
+
+            font-size: 100px;
+            top: 100px;
+            margin-left: 100px;
+            margin-top: 50px;
+            z-index: 99;
+            color: aliceblue;
+        }
+
+        .pointsB{
+            float: right;
+            margin-right: 10px;
+            margin-top: 200px;
+            font-size: 100px;
+            color: aliceblue;
+        }
+        h1{
+
+            font-family: 'Righteous', cursive;
+            font-size: 50px;
+            color: darkblue;
+
+        }
+        .kk{
+            border:2px solid white;
+        }
+        span {
+
+            font: 700 4em/1 "Oswald", sans-serif;
+            letter-spacing: 0;
+            padding: .25em 0 .325em;
+            display: block;
+            margin: 0 auto;
+            text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+            /* Clip Background Image */
+
+            background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+            -webkit-background-clip: text;
+
+
+            /* Animate Background Image */
+
+            -webkit-text-fill-color: transparent;
+            -webkit-animation: aitf 80s linear infinite;
+
+            /* Activate hardware acceleration for smoother animations */
+
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-backface-visibility: hidden;
+
+        }
+
+
+        /* Animate Background Image */
+
+        @-webkit-keyframes aitf {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+    </style>
+
+
+</head>
+<body>
+<span>
+   <center><h1>Tic Tac Toe</h1></center>
+
+        <hr size=30 >
+  </span>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8 kk">
+            <div class="pointsA" id="k1">
+                <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;&nbsp;
+
+
+
+            </div>
+
+
+            <div class="pointsB"id ="k2">
+
+
+            </div>
+
+
+
+            <div style=" border: 2px solid White;text-align: center;margin-left:250px;width: 30%;margin-top: 50px; background-color:chartreuse;opacity: 0.7;margin-bottom: 30px">
+                <img src="images/opp.png" alt="" width="70px" height="70px"  ><br>
+                A<br>
+                <div class="box" onclick="myFunction()" >
+                    <p id="b1">&nbsp;</p>
+                </div>
+                <div class="box" onclick="x1()" >
+                    <p id="b2"> &nbsp;</p>
+                </div>
+                <div class="box" onclick="x2()">
+
+                    <p id="b3">&nbsp;</p>
+
+                </div>
+
+                <br>
+                <div class="box" onclick="x3()" >
+
+                    <p id="b4">&nbsp;</p>
+
+                </div>
+                <div class="box" onclick="x4()">
+                    <p id="b5">&nbsp;</p>
+                </div>
+                <div class="box" onclick="x5()" >
+                    <p id="b6">&nbsp;</p>
+
+                </div>
+                <br>
+                <div class="box" onclick="x6()">
+                    <p id="b7">&nbsp;</p>
+
+                </div>
+                <div class="box" onclick="x7()">
+                    <p id="b8">&nbsp;</p>
+                </div>
+                <div class="box" onclick="x8()" >
+                    <p id="b9">&nbsp;</p>
+
+                </div>
+                <br>
+
+                B<br>
+                <img src="images/opp1.png" alt="" width="70px"height="70px"><br>
+
+            </div>
+
+
+
+        </div>
+        <div class="col-6 col-md-4" style="border: 5px double yellowgreen">
+
+            <br> <h5>Rounds &nbsp; Winner &nbsp; Looser;</h5><br><hr><br>
+<h5>            <p id="win" style="font-size: 40px"></p></h5>
+
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+<br>
+<center style=""><a href="http://localhost/game/">Refresh</a></center>
+
+</body>
+</html>
