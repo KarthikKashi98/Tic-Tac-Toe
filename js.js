@@ -26,12 +26,10 @@ function refresh(){
     if(t>3){
         if(a>b){
             alert("a is a winner")
-
         }
         else{
             alert("b is a winner")
         }
-
     }
     a=0;
     b=0
@@ -43,8 +41,6 @@ function decide() {
     if (turn % 2 === 0) {
         winlist+= t +"&nbsp;&nbsp;&nbsp;  A &nbsp;&nbsp;&nbsp; B <br><br> "
         document.getElementById("win").innerHTML = winlist;a++;
-
-
     }
 
     else {
@@ -130,14 +126,18 @@ function decide() {
     }
 
     function myFunction() {
-        fun();
-        if (turn % 2 === 0) {
-
-            document.getElementById("b1").innerHTML = "X";
-            k[0]="x"
+        
+        if (document.getElementById("b1").innerHTML!="&nbsp;"){
+            alert("You made wroung move");
+        }
+        else {
+            fun();
+            if (turn % 2 === 0) {
+                document.getElementById("b1").innerHTML = "X";
+                k[0]="x"
         } else {
 
-   
+            
             document.getElementById("b1").innerHTML = "O";
             k[0]="o"
         }
@@ -145,31 +145,45 @@ function decide() {
         turn += 1;
 
     }
+}
 
 
     function x1() {
-            fun();
-
-            if((turn%2)===0){
+            console.log(document.getElementById("b2").innerHTML)
+            console.log(document.getElementById("b2").innerHTML.indexOf("&nbsp;"))
+            if (document.getElementById("b2").innerHTML.indexOf("&nbsp;")==-1){
+                alert("You made wroung move");
+            }
+            
+            else {
+                fun();
+                if(turn%2===0){
 
                 document.getElementById("b2").innerHTML = "X";
                 k[1]="x"
             }
+
             else {
                 document.getElementById("b2").innerHTML = "O";
                 k[1]="o"
             }
             f();
             turn+=1;
+        }
     }
 
 
 
    function x2() {
 
-                            fun();
+                            
 
-                            if(turn%2===0){
+                            if (document.getElementById("b3").innerHTML!="&nbsp;"){
+                                alert("You made wroung move");
+                            }
+                            else {
+                                fun();
+                                if (turn%2===0){
 
                                 document.getElementById("b3").innerHTML = "X";
                                 k[2]="x"
@@ -182,89 +196,107 @@ function decide() {
                             }
                             f();
                             turn+=1;
+                        }
    }
 
     function x3() {
-            fun();
-
-
-            if(turn%2===0){
-
+            
+            if (document.getElementById("b4").innerHTML!="&nbsp;"){
+                alert("You made wroung move");
+            }
+            else
+            { fun();
+                if (turn%2===0){
                 document.getElementById("b4").innerHTML = "X";
                 k[3]="x"
 
             }
             else {
-
-
                 document.getElementById("b4").innerHTML = "O";
                 k[3]="o"
             }
             f();
             turn+=1;
     }
+}
 
 function x4() {
-            fun();
-
-            if(turn%2===0){
-
+           
+            if (document.getElementById("b5").innerHTML!="&nbsp;"){
+                alert("You made wroung move");
+            }
+            else {
+                fun();
+                if (turn%2===0){
                 document.getElementById("b5").innerHTML = "X";
                 k[4]="x"
             }
             else {
-
-
                 document.getElementById("b5").innerHTML = "O";
                 k[4]="o"
             }
             f();
             turn+=1;
+        }
 
   }
 
   function x5() {
-            fun();
+           
+            if (document.getElementById("b6").innerHTML!="&nbsp;"){
+                alert("You made wroung move");
+            }
+            else {
+                fun();
 
-            if(turn%2===0){
+                if (turn%2===0){
 
                 document.getElementById("b6").innerHTML = "X";
                 k[5]="x"
             }
             else {
-
-
                 document.getElementById("b6").innerHTML = "O";
                 k[5]="o"
             }
             f();
             turn+=1;
-
+        }
   }
 
 
   function x6() {
-            fun();
+            
 
-            if(turn%2===0){
+            if (document.getElementById("b7").innerHTML!="&nbsp;"){
+                alert("You made wroung move");
+            }
+            else {
+                fun();
+                if (turn%2===0){
 
                 document.getElementById("b7").innerHTML = "X";
                 k[6]="x"
             }
             else {
-
-
                 document.getElementById("b7").innerHTML = "O";
                 k[6]="o"
             }
             f();
             turn+=1;
+        }
   }
 
-  function x7() {
-         fun();
 
-            if(turn%2===0){
+
+  function x7() {
+        
+
+         if (document.getElementById("b8").innerHTML!="&nbsp;"){
+            alert("You made wroung move");
+        }
+        else{
+            fun();
+             if (turn%2===0){
 
                 document.getElementById("b8").innerHTML = "X";
                 k[7]="x"
@@ -277,22 +309,26 @@ function x4() {
             }
             f();
             turn+=1;
-  }
-
+        }
+    }
   function x8() {
-            fun();
+            
 
-            if(turn%2===0){
+            if (document.getElementById("b9").innerHTML!="&nbsp;"){
+                alert("You made wroung move");
+            }
+            else {
+                fun();
+                if (turn%2===0){
 
                 document.getElementById("b9").innerHTML = "X";
                 k[8]="x"
-            }
-            else {
-
-
-                document.getElementById("b9").innerHTML = "O";
-                k[8]="o"
-            }
-            f();
-            turn+=1;
+                    }
+                    else {
+                        document.getElementById("b9").innerHTML = "O";
+                        k[8]="o"
+                    }
+                    f();
+                    turn+=1;
   }
+}
